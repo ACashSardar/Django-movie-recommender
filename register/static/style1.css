@@ -59,19 +59,19 @@ input[type="submit"] {
 }
 
 input.login[type="submit"]:hover {
-  background-color: rgb(255, 230, 0);
+  background-color: rgb(25, 25, 25);
 }
 
 input.logout[type="submit"]:hover {
-  background-color: rgb(255, 230, 0);
+  background-color: rgb(25, 25, 25);
 }
 
 input.create[type="submit"]:hover {
-  background-color: rgb(255, 230, 0);
+  background-color: rgb(25, 25, 25);
 }
 
 input.submit_btn[type="submit"]:hover {
-  background-color: rgb(255, 230, 0);
+  background-color: rgb(25, 25, 25);
 }
 .crispyforms,
 .crispyforms-login {

@@ -1,20 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+  
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Output Page</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     {% load static %}
     <link rel='stylesheet' href="{% static 'style.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body> 
-    <div class="about-movie" >
-        <a href="/homepage" style="color: orangered;text-decoration:none;position:absolute; left:2%; top:35%; font-weight:bold"><label>Home</label></a>
-        <label>'{{movie_name}}' <br> doesn't exist in the Database<br>Kindly check the spelling</label>
-        <br>  
+  
+<body>
+
+    <nav>
+      
+        <img src="http://assets.stickpng.com/images/5848152fcef1014c0b5e4967.png" alt="Py">
+      <img src="https://seeklogo.com/images/D/django-logo-F46C1DD95E-seeklogo.com.png" alt="movie" style="left: 40px;">
+      <img src="https://www.freepnglogos.com/uploads/film-reel-png/film-reel-the-movies-owens-valley-12.png" alt="Py"  style="left: 80px;">
+      <a href="homepage"><img src="https://cpng.pikpng.com/pngl/s/53-531531_house-icon-house-logo-png-white-clipart.png" alt="Py"  style="left: 115px;"></a>
+
+      <form  action="/logout" method="post">
+        {% csrf_token %}
+        <input type="submit" value="LOG OUT" name="logout">
+      </form>
+    </nav>
+
+    <div class="message">
+      <br><br>
+      <label>Sorry, Movie not found!</label> 
     </div>
+
+
     <div class="footer">
         <label style="color:white">© Akash Sardar, 2022</label>
         <br>
@@ -24,5 +40,8 @@
         <a href="https://www.instagram.com/lazer.kitty/" style="margin: 8px; text-decoration: none; color:rgb(255, 0, 234)" class="fa fa-instagram"></a>
         <br>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
+  
 </html>

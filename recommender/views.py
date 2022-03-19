@@ -51,7 +51,7 @@ def recommend_movie(movie_name):
     for i in score_list:
         rec_mov_name.append((movies['title'].iloc[i[0]]))
         rec_mov_poster.append(fetch_poster(movies['id'].iloc[i[0]]))
-        print(movies['title'].iloc[i[0]])
+        # print(movies['title'].iloc[i[0]]) // movie names
     return rec_mov_name,rec_mov_poster
     
 def firstpage(request):
@@ -69,7 +69,7 @@ def output(request):
         name,poster=recommend_movie(movie_name)
         My_dict={name[i]:poster[i] for i in range(len(name))}
         # print(My_dict.keys(),My_dict.values())
-        return render(request,'Output.html',{'result':My_dict, 'movie_name':movie_name})    
+        return render(request,'homepage.html',{'result':My_dict, 'movie_name':movie_name, 'status':True})    
     except:
         return render(request,'Warning.html',{'movie_name':movie_name})
 
