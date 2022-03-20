@@ -10,22 +10,22 @@ from django.contrib.auth import views as auth_views
 # Create your views here.
 
 def login(request):
-    login_view=auth_views.LoginView.as_view(template_name='login.html')(request)
+    
     if request.method=='POST':
         try:
             username=request.POST['username']
-            my_dict={'person':username}
+            my_dict={"person":username}
             return render(request,'homepage.html',my_dict)
         except:
-            return login_view
-    return login_view
+            return auth_views.LoginView.as_view(template_name='login.html')(request)
+    return auth_views.LoginView.as_view(template_name='login.html')(request)
 
 def register(request):
     if request.method=='POST':
         form=UserRegistrationFrom(request.POST)
         if form.is_valid():
             form.save()
-            username=form.cleaned_data.get('username')
+            # username=form.cleaned_data.get('username')
             return redirect('login')
     else:
         print('Message Display2')
