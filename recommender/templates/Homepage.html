@@ -26,7 +26,7 @@
 
     <div class="message">
       <br><br>
-      <label>Django Movie Recommender System</label> 
+      <strong>Django Movie Recommender System</strong> 
       {% if messages %}
       {% for message in messages%}
       <label>{{message}}<br>Welcome to</label>
@@ -1403,9 +1403,6 @@
                 <option value='The Hangover'>The Hangover</option>
                 <option value='Ip Man 3'>Ip Man 3</option>
                 <option value='Austin Powers: The Spy Who Shagged Me'>Austin Powers: The Spy Who Shagged Me</option>
-                <option value='Batman'>Batman</option>
-                <option value='Batman'>Batman</option>
-                <option value='Batman'>Batman</option>
                 <option value='Batman'>Batman</option>
                 <option value='There Be Dragons'>There Be Dragons</option>
                 <option value='Lethal Weapon 3'>Lethal Weapon 3</option>
@@ -4853,12 +4850,14 @@
     </div>
 
 
-    {% if status %}
+    
     <div class="message">
+      {% if status %}
         <label>You searched for '{{movie_name}}'</label><br>
         <label>YOU MAY ALSO LIKE</label>
+      {% endif %}
     </div>
-    {% endif %}
+    
 
     <div class="movielist">
       {% for key,value in result.items %}

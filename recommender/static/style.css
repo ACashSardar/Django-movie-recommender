@@ -58,11 +58,15 @@ input[type="submit"] {
   width: 80px;
   height: 40px;
   border-radius: 5px;
-  background: navy;
+  background: purple;
   color: white;
   border: 1px solid white;
   text-align: center;
   margin: 4px 2px;
+}
+
+#search_btn:hover {
+  background-color: black;
 }
 
 input[type="text"] {
@@ -76,7 +80,7 @@ input[type="text"] {
 }
 
 input[type="submit"]:hover {
-  background-color: inherit;
+  background-color: black;
 }
 
 .container {
