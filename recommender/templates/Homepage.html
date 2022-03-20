@@ -4847,7 +4847,7 @@
                 
         
             </datalist>
-            <input type="submit" value="Search" class="search_btn" name="search_btn">
+            <input type="submit" value="Search" class="search_btn" name="search_btn" style="max-width: 80px;">
         </form>
       </div>
     </div>
@@ -4858,7 +4858,7 @@
         <label>You searched for '{{movie_name}}'</label><br>
         <label>YOU MAY ALSO LIKE</label>
     </div>
-    {% endif%}
+    {% endif %}
 
     <div class="movielist">
       {% for key,value in result.items %}
