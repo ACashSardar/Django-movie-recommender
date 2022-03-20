@@ -1,7 +1,6 @@
 from django.urls import path
-from register import views
 from django.contrib.auth import views as auth_views
-
+from register import views
 
 
 
