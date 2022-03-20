@@ -14,9 +14,8 @@ def login(request):
     if request.method=='POST':
         try:
             username=request.POST['username']
-            print(username)
-            messages.success(request, f'Hi👋 {username}!')
-            return render(request,'homepage.html')
+            my_dict={'person':username}
+            return render(request,'homepage.html',my_dict)
         except:
             return login_view
     return login_view
