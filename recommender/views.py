@@ -64,14 +64,13 @@ def home(request):
 
 def output(request):
     movie_name=str(request.POST.get('movie_name'))
-    
-    # try:
-    name,poster=recommend_movie(movie_name)
-    My_dict={name[i]:poster[i] for i in range(len(name))}
-    # print(My_dict.keys(),My_dict.values())
-    return render(request,'homepage.html',{'result':My_dict, 'movie_name':movie_name, 'status':True})    
-    # except:
-    #     return render(request,'Warning.html',{'movie_name':movie_name})
+    try:
+        name,poster=recommend_movie(movie_name)
+        My_dict={name[i]:poster[i] for i in range(len(name))}
+        # print(My_dict.keys(),My_dict.values())
+        return render(request,'Homepage.html',{'result':My_dict, 'movie_name':movie_name, 'status':True})    
+    except:
+        return render(request,'Warning.html',{'movie_name':movie_name})
 
 
 if __name__=="__main__":

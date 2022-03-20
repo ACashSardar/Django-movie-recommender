@@ -54,6 +54,17 @@ input[type="submit"] {
   margin: 4px 2px;
 }
 
+#search_btn {
+  width: 80px;
+  height: 40px;
+  border-radius: 5px;
+  background: navy;
+  color: white;
+  border: 1px solid white;
+  text-align: center;
+  margin: 4px 2px;
+}
+
 input[type="text"] {
   margin: 2px;
   margin-right: 0px;
@@ -65,7 +76,7 @@ input[type="text"] {
 }
 
 input[type="submit"]:hover {
-  background-color: rgb(25, 25, 25);
+  background-color: inherit;
 }
 
 .container {
@@ -98,7 +109,7 @@ img {
 .message {
   text-align: center;
   position: relative;
-  font-size: calc(12px + 1.5vw);
+  font-size: calc(15px + 1.2vw);
   margin-top: 20px;
   padding: 0px;
   font-family: "Lucida Sans";
