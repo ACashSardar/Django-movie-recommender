@@ -29,7 +29,7 @@ def fetch_poster(movie_id):
     url="https://api.themoviedb.org/3/movie/{}?api_key=7529d26771e710b99bf8c7deda5db2f6&language=en-US".format(movie_id)
     response=requests.get(url)
     movie_info=response.json()
-    return ("http://image.tmdb.org/t/p/w500/"+movie_info['poster_path'])
+    return ("http://image.tmdb.org/t/p/w500/"+str(movie_info['poster_path']))
     
 
 def recommend_movie(movie_name):
@@ -74,4 +74,4 @@ def output(request):
 
 
 if __name__=="__main__":
-    recommend_movie('The Amazing Spider-Man 2')
+    recommend_movie('The Amazing Spider-Man')
