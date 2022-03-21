@@ -97,7 +97,6 @@ input[type="submit"]:hover {
 img {
   width: 97%;
   margin-bottom: 2px;
-  border: 1px solid white;
 }
 
 .trailor {
@@ -105,7 +104,7 @@ img {
   color: white;
   background: rgba(255, 255, 255, 0.3);
   padding: 4px 6px;
-  margin: 0px 20% 0px 1.5%;
+  margin: 0px 1.5% 0px 1.5%;
   border: 1px solid white;
   font-family: "Lucida Sans";
 }
@@ -132,7 +131,7 @@ img {
   font-size: calc(13px + 1.2vw);
   margin-top: 40px;
   padding: 5px;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family: Cambria;
   color: white;
   overflow: hidden;
 }
@@ -149,10 +148,14 @@ img {
   background: inherit;
   border-radius: 5px;
   overflow: hidden;
-  font-size: 15px;
-  font-family: "Segoe UI";
+  font-size: 16px;
+  font-family: Cambria;
   color: yellow;
   font-weight: bold;
+}
+
+.content img {
+  border: 1px solid white;
 }
 
 .footer {
