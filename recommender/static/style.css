@@ -5,7 +5,7 @@
 }
 
 body {
-  background: linear-gradient(to bottom left, red, purple);
+  background: linear-gradient(to bottom left, navy, purple);
   backdrop-filter: blur(10px);
   min-height: 100vh;
   max-width: 100vw;
@@ -47,26 +47,27 @@ input[type="submit"] {
   width: 140px;
   height: 40px;
   border-radius: 5px;
-  background: orangered;
-  color: white;
-  border: 1px solid rgb(255, 0, 34);
+  background: yellow;
+  color: black;
+  border: 1px solid yellow;
   text-align: center;
   margin: 4px 2px;
 }
 
 #search_btn {
   width: 80px;
-  height: 40px;
-  border-radius: 5px;
-  background: rgb(228, 0, 133);
-  color: white;
-  border: 1px solid orchid;
+  height: 39px;
+  border-radius: 2px;
+  background: rgb(242, 255, 0);
+  color: black;
+  border: 1px solid yellow;
   text-align: center;
   margin: 4px 2px;
 }
 
 #search_btn:hover {
-  background-color: black;
+  background-color: inherit;
+  color: yellow;
 }
 
 input[type="text"] {
@@ -75,17 +76,18 @@ input[type="text"] {
   padding: 10px;
   width: 250px;
   text-align: center;
-  border: 1px solid white;
+  border: 1px solid yellow;
   border-radius: 2px;
 }
 
 input[type="submit"]:hover {
   background-color: black;
+  color: yellow;
 }
 
 .container {
   position: relative;
-  top: 2vh;
+  top: 1.8vh;
   margin: 0px;
   margin-top: 65px;
   padding: 5px;
@@ -97,7 +99,27 @@ img {
   margin-bottom: 2px;
   border-radius: 4px;
 }
+iframe {
+  height: 60%;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid black;
+  margin: 0px;
+}
 
+.trailor {
+  text-align: center;
+  color: red;
+  background: white;
+  padding: 2px 6px;
+  margin: 2px 8%;
+  border-radius: 15px;
+}
+
+.trailor a {
+  text-decoration: none;
+  color: red;
+}
 .movielist {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -113,10 +135,10 @@ img {
 .message {
   text-align: center;
   position: relative;
-  font-size: calc(15px + 1.2vw);
-  margin-top: 20px;
-  padding: 0px;
-  font-family: "Lucida Sans";
+  font-size: calc(13px + 1.2vw);
+  margin-top: 40px;
+  padding: 5px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   color: white;
   overflow: hidden;
 }
@@ -136,7 +158,8 @@ img {
   overflow: hidden;
   font-size: 15px;
   font-family: "Segoe UI";
-  color: orange;
+  color: yellow;
+  font-weight: bold;
 }
 
 .footer {

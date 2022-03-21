@@ -25,9 +25,9 @@
     </nav>
 
     <div class="message">
-      <label> Hi👋{{user}}<br>Welcome to</label>
-      <br><br>
-      <strong>Django Movie Recommender System</strong> 
+      <label> Hi, {{user}}!<br>Welcome to</label>
+      <br>
+      <strong style="color: yellow;">Django Movie Recommender System</strong> 
     </div>
 
     <div class="container">
@@ -4849,22 +4849,24 @@
     
     <div class="message">
       {% if status %}
-        <label>You searched for '{{movie_name}}'</label><br>
-        <label>YOU MAY ALSO LIKE</label>
+        <label>You searched for '{{movie_name}}'</label><br><br>
+        <hr style="width:80%;position:relative;left:10%;"><br>
+        <strong style="color: yellow;">YOU MAY ALSO LIKE</strong>
       {% endif %}
     </div>
     
 
     <div class="movielist">
       {% for key,value in result.items %}
-
           <div class="content">
-              <a href="https://www.imdb.com/find?q={{key}}&ref_=nv_sr_sm"><img src="{{value}}"><br></a>
-              <label style="color: inherit">{{key}}</label>
-          </div>
-          
+              <a href="https://www.imdb.com/find?q={{key}}&ref_=nv_sr_sm"><img src="{{value|first}}"><br></a>
+              <label style="color: inherit">{{key}}</label><br>
+              <div class="trailor">
+                <a href="https://www.youtube.com/embed/{{value|last}}?autoplay=0&autohide=2&border=0&wmode=opaque&enablejsapi=1&modestbranding=1&controls=1&showinfo=1&mute=0">Watch Trailor ▶️ </a>
+              </div>
+          </div>      
       {% endfor %}
-      
+  
       {% for i in '0123456789'|make_list %}
           <br>
       {% endfor %}
