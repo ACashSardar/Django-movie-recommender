@@ -1,3 +1,4 @@
+from distutils.log import error
 from urllib import response
 from django.shortcuts import render
 from django.http import HttpResponse
@@ -70,10 +71,15 @@ def output(request):
         ids,name,poster=recommend_movie(movie_name)
         key_list=[]
         for id in ids:
-            url= f"https://api.themoviedb.org/3/movie/{id}/videos?api_key=06412c2ac60d3b3a66c7fb129dcaca28&append_to_response=videost"
-            response=requests.get(url)
-            information=response.json()
-            key_list.append(information['results'][0]['key'])
+            try:
+                url= f"https://api.themoviedb.org/3/movie/{id}/videos?api_key=06412c2ac60d3b3a66c7fb129dcaca28&append_to_response=videost"
+                response=requests.get(url)
+                information=response.json()
+                key_list.append(information['results'][0]['key'])
+            except:
+                key_list.append('bad request')
+                
+        print(ids)
         print(key_list)
 
         My_dict={str(i+1)+". "+name[i]:[poster[i],key_list[i]] for i in range(len(name))}
@@ -86,4 +92,4 @@ def output(request):
 
 
 if __name__=="__main__":
-    recommend_movie('The Amazing Spider-Man')
+    recommend_movie('Krrish')

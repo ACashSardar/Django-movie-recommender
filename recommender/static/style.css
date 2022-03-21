@@ -97,28 +97,22 @@ input[type="submit"]:hover {
 img {
   width: 97%;
   margin-bottom: 2px;
-  border-radius: 4px;
-}
-iframe {
-  height: 60%;
-  width: 100%;
-  border-radius: 5px;
-  border: 1px solid black;
-  margin: 0px;
+  border: 1px solid white;
 }
 
 .trailor {
-  text-align: center;
-  color: red;
-  background: white;
-  padding: 2px 6px;
-  margin: 2px 8%;
-  border-radius: 15px;
+  text-align: left;
+  color: white;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 4px 6px;
+  margin: 0px 20% 0px 1.5%;
+  border: 1px solid white;
+  font-family: "Lucida Sans";
 }
 
 .trailor a {
   text-decoration: none;
-  color: red;
+  color: white;
 }
 .movielist {
   display: grid;
@@ -151,9 +145,9 @@ iframe {
   width: 98%;
   left: 1%;
   padding: 8px 2px;
-  margin: 2px 0px;
+  margin: 4px 0px;
   background: rgb(0, 0, 0);
-  border: 1px solid white;
+  border: 1px solid rgb(0, 0, 0);
   border-radius: 5px;
   overflow: hidden;
   font-size: 15px;
