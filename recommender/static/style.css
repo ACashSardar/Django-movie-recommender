@@ -58,9 +58,9 @@ input[type="submit"] {
   width: 80px;
   height: 40px;
   border-radius: 5px;
-  background: purple;
+  background: rgb(228, 0, 133);
   color: white;
-  border: 1px solid white;
+  border: 1px solid orchid;
   text-align: center;
   margin: 4px 2px;
 }

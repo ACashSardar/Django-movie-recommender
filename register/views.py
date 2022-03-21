@@ -6,19 +6,20 @@ from django.contrib import messages
 from . forms import UserRegistrationFrom
 from django import forms
 from django.contrib.auth import views as auth_views
+from recommender.views import home
 
 # Create your views here.
 
 def login(request):
-    
-    if request.method=='POST':
-        try:
+    try:
+        if request.method=='POST':
             username=request.POST['username']
-            my_dict={"person":username}
-            return render(request,'homepage.html',my_dict)
-        except:
-            return auth_views.LoginView.as_view(template_name='login.html')(request)
-    return auth_views.LoginView.as_view(template_name='login.html')(request)
+            if str(auth_views.LoginView.as_view(template_name='login.html')(request))[1]=='T':
+                return auth_views.LoginView.as_view(template_name='login.html')(request)
+        return home(request,username)
+        # return render(request,'homepage.html',my_dict)
+    except:
+        return auth_views.LoginView.as_view(template_name='login.html')(request)
 
 def register(request):
     if request.method=='POST':

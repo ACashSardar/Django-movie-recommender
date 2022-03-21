@@ -58,8 +58,8 @@ def firstpage(request):
     from register import views as v
     return v.register(request)
 
-def home(request):
-    return render(request,'Homepage.html')
+def home(request,user):
+    return render(request,'Homepage.html',{'user':user})
 
 
 def output(request):
