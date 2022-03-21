@@ -146,8 +146,7 @@ img {
   left: 1%;
   padding: 8px 2px;
   margin: 4px 0px;
-  background: rgb(0, 0, 0);
-  border: 1px solid rgb(0, 0, 0);
+  background: inherit;
   border-radius: 5px;
   overflow: hidden;
   font-size: 15px;
