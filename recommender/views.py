@@ -54,7 +54,7 @@ def recommend_movie(movie_name):
         rec_mov_id.append((movies['id'].iloc[i[0]]))
         rec_mov_name.append((movies['title'].iloc[i[0]]))
         rec_mov_poster.append(fetch_poster(movies['id'].iloc[i[0]]))
-        print(movies['title'].iloc[i[0]]) #movie names
+        #print(movies['title'].iloc[i[0]]) #movie names
     return rec_mov_id,rec_mov_name,rec_mov_poster
     
 def firstpage(request):
@@ -78,13 +78,8 @@ def output(request):
                 key_list.append(information['results'][0]['key'])
             except:
                 key_list.append('bad request')
-                
-        print(ids)
-        print(key_list)
 
         My_dict={str(i+1)+". "+name[i]:[poster[i],key_list[i]] for i in range(len(name))}
-        # print(My_dict.keys(),My_dict.values())
-        print("okkkkkkkkkkkkkkkk")
         return render(request,'Homepage.html',{'result':My_dict, 'movie_name':movie_name, 'status':True})    
     
     except:
