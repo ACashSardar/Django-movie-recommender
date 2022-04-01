@@ -12,9 +12,7 @@
     
     <nav>
         <img src="http://assets.stickpng.com/images/5848152fcef1014c0b5e4967.png" alt="Py">
-        
         <img src="https://seeklogo.com/images/D/django-logo-F46C1DD95E-seeklogo.com.png" alt="movie" style="left: 40px;">
-        <img src="https://www.freepnglogos.com/uploads/film-reel-png/film-reel-the-movies-owens-valley-12.png" alt="Py"  style="left: 80px;">
 
         <form  action="/register" method="post">
             {% csrf_token %}
@@ -36,12 +34,19 @@
         <form  method="post">
             {% csrf_token %}
                 <div class="crispyforms">
-                    {% load crispy_forms_tags %}
-                    {{ form|crispy }}
+                    {% for field in form %}
+                        <label>{{field.html_name}}</label><br>
+                        {{field}}<br><br>
+                    {% endfor %}
+                <p>*Note: 
+                    Your password can’t be too similar to your other personal information.
+                    Your password must contain at least 8 characters.
+                    Your password can’t be a commonly used password.
+                    Your password can’t be entirely numeric.</p>
                 </div>
-                <input type="submit" class="submit_btn" value="Sign Up" style="position:relative; left:20%">
+                <input type="submit" class="submit_btn" value="SIGN UP">
         </form>
-        <label style="position:relative;left:20%">Already have an account ? <a href="/login" style="color: white;">Sign In</label></a>
+        <label class="ok">Already have an account ? <a href="login" style="color: navy;">Sign In</a></label>
     </div>
 
 

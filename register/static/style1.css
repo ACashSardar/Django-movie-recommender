@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 body {
-  background: linear-gradient(to bottom left, red, purple);
   backdrop-filter: blur(10px);
   background-size: cover;
   min-height: 100vh;
@@ -16,7 +15,7 @@ nav {
   display: flex;
   position: relative;
   justify-content: right;
-  background: rgba(0, 0, 0, 0.8);
+  background: black;
   color: white;
   padding: 5px;
 }
@@ -31,82 +30,101 @@ input[type="submit"] {
   width: 140px;
   height: 40px;
   border-radius: 5px;
-  background: orangered;
+  background: darkcyan;
   color: white;
-  border: 1px solid rgb(255, 0, 34);
+  border: 1px solid darkcyan;
   text-align: center;
   margin: 4px 2px;
 }
 
+.submit_btn{
+  position: relative;
+  left: 35%;
+}
+
 .app-name {
-  width: 59%;
+  width: 30%;
   position: relative;
   top: 5vh;
-  left: 20.5%;
-  background: rgba(0, 0, 0, 0.5);
+  left: 35%;
+  background: darkcyan;
   color: rgb(255, 255, 255);
   text-align: center;
-  font-size: 20px;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
   border-radius: 5px;
   padding: 15px;
+  box-shadow: 2px 2px 2px rgb(70, 70, 70);
 }
 
 .container {
   position: relative;
   top: 8vh;
   margin: 0px;
-  padding: 5px;
 }
 
 input.login[type="submit"]:hover {
-  background-color: rgb(25, 25, 25);
-  color: red;
+  background-color: white;
+  color: darkcyan;
+  border: 2px solid darkcyan;
 }
 
 input.logout[type="submit"]:hover {
-  background-color: rgb(25, 25, 25);
-  color: red;
+  background-color: white;
+  color: darkcyan;
+  border: 2px solid darkcyan;
 }
 
 input.create[type="submit"]:hover {
-  background-color: rgb(25, 25, 25);
-  color: red;
+  background-color: white;
+  color: darkcyan;
+  border: 2px solid darkcyan;
 }
 
 input.submit_btn[type="submit"]:hover {
-  background-color: rgb(25, 25, 25);
-  color: red;
+  background-color: white;
+  color: darkcyan;
+  border: 2px solid darkcyan;
 }
 .crispyforms,
 .crispyforms-login {
-  width: 60%;
-  left: 20%;
-  height: 30%;
-  color: rgb(255, 255, 255);
-  font-family: Arial, Helvetica, sans-serif;
+  width: 30%;
+  left: 35%;
+  font-family: "Roboto", sans-serif;
   font-weight: lighter;
-  font-size: 12px;
+  font-size: 15px;
   position: relative;
   overflow: hidden;
-  padding: 10px 10px 10px 20px;
-  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px 10px 20px 20px;
+  background-color: lavender;
   margin-bottom: 5px;
   border-radius: 5px;
+  box-shadow: 2px 2px 2px rgb(70, 70, 70);
 }
 
-.crispyforms input {
+.crispyforms input,.crispyforms-login input {
   width: 95%;
-  height: 25px;
-  border: 1px solid rgb(0, 0, 0);
-  border-radius: 2px;
-  padding: 5px;
+  border: 1px solid lavender;
+  border-radius: 4px;
+  padding: 10px;
+  background: white;
 }
 
 .crispyforms-login input {
-  width: 95%;
-  height: 25px;
-  border: 1px solid rgb(0, 0, 0);
-  border-radius: 2px;
-  padding: 5px;
-  margin-bottom: 15px;
+  margin-bottom: 35px;
+}
+
+.ok{
+  position: relative;
+  left: 35%;
+  font-family: "Roboto", sans-serif;
+}
+@media only screen and (max-width: 600px){
+  .app-name,.crispyforms,.crispyforms-login{
+    width:90%;
+    left: 5%;
+  }
+  .submit_btn,.ok{
+    left: 5%;
+  }
 }

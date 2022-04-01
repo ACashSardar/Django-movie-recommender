@@ -14,7 +14,6 @@
         <img src="http://assets.stickpng.com/images/5848152fcef1014c0b5e4967.png" alt="Py">
         
         <img src="https://seeklogo.com/images/D/django-logo-F46C1DD95E-seeklogo.com.png" alt="movie" style="left: 40px;">
-        <img src="https://www.freepnglogos.com/uploads/film-reel-png/film-reel-the-movies-owens-valley-12.png" alt="Py"  style="left: 80px;">
 
         <form  action="/register" method="post">
             {% csrf_token %}
@@ -39,11 +38,10 @@
                     {% load crispy_forms_tags %}
                     {{ form|crispy }}
                 </div>
-
-                <input type="submit" class="submit_btn" value="Sign In" style="position:relative; left:20%">
+                <input type="submit" class="submit_btn" value="SIGN IN">
         </form>
+        <label class="ok">Don't have an account yet?<a href="register"  style="color: navy;">Sign Up</a></label>
     </div>
-
 
 </body>
 </html>
