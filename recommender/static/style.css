@@ -72,12 +72,23 @@ input[type="submit"]:hover {
   color: red;
 }
 
+.profile-pic{
+  background: purple;
+  font-size: 32px;
+  padding: 4px;
+  margin-top: 40px;
+  position: relative;
+  width:82px;color: white;
+  border: 1px solid pink;
+  font-family: "Roboto", sans-serif;
+  border-radius: 50%;
+}
 .message {
   text-align: center;
   position: relative;
-  font-size: calc(13px + 1.2vw);
-  margin-top: 30px;
-  padding: 5px;
+  font-size: calc(11px + 1.2vw);
+  margin-top: 10px;
+  padding: 0px;
   font-family: Cambria;
   color: black;
   overflow: hidden;
@@ -85,9 +96,9 @@ input[type="submit"]:hover {
 
 .container {
   position: relative;
-  top: 1.8vh;
+  top: 1vh;
   margin: 0px;
-  margin-top: 65px;
+  margin-top: 10px;
   padding: 5px;
   text-align: center;
 }
@@ -130,6 +141,12 @@ input[type="submit"]:hover {
   font-size: 12px;
   font-family: "Roboto", sans-serif;
 }
+.line{
+  position: relative;
+  width: 70%;left:15%;
+  background-color: blueviolet;
+  border: 1px solid blueviolet;
+}
 /* newly added */
 
 @media only screen and (max-width: 600px) {
@@ -148,8 +165,12 @@ input[type="submit"]:hover {
     font-size: 15px;
   }
   .message {
-    padding-left: 15%;
-    padding-right: 15%;
+    padding-left: 14%;
+    padding-right: 14%;
+  }
+  .line{
+    left: 0%;
+    width:100%;
   }
 }
 

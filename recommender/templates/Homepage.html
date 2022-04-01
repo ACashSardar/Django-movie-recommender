@@ -22,10 +22,16 @@
       </form>
     </nav>
 
+    <center>
+    <div class="profile-pic">
+      <h1>{{user|upper|make_list|first}}</h1>
+    </div>
+    </center>
+
     <div class="message">
-      <label> Hi, {{user}}!<br>Welcome to</label>
+      <small><label> Hi, {{user}}!<br>Welcome to</label></small>
       <br>
-      <strong>Django Movie Recommender System</strong> 
+      <strong>Movie Recommender System</strong> 
     </div>
 
     <div class="container">
@@ -4846,9 +4852,9 @@
 
     {% if status %}
     <div class="message"> 
-        <label>You searched for <strong>{{movie_name}}</strong></label><br>
-        <strong style="color: darkcyan;text-shadow:1px 1px 1px white">YOU MAY ALSO LIKE</strong>
-        <hr color="black" style="width: 70%;position:relative;left:15%"><br><br>
+        <label>You searched for <strong>{{movie_name}}</strong></label><br><br>
+        <strong style="color: darkcyan;text-shadow:1px 1px 1px white">YOU MAY ALSO LIKE ❤</strong>
+        <!-- <hr class="line"><br> -->
     </div>
     {% endif %}
 
