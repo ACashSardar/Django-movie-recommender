@@ -8,9 +8,6 @@ from recommender.views import home
 
 # Create your views here.
 LoggedIn=False
-def isLoggedIn():
-    global LoggedIn
-    return LoggedIn
 
 def login(request):
     if request.method=='POST':

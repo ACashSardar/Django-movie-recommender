@@ -61,7 +61,7 @@ def firstpage(request):
     return v.register(request)
 
 def home(request):
-    if v.isLoggedIn():
+    if v.LoggedIn:
         return render(request,'Homepage.html')
     return redirect('login')
 
