@@ -1,6 +1,5 @@
 from django.shortcuts import render,redirect
 from django.contrib.auth import login, authenticate
-from flask import request
 from . forms import UserRegistrationFrom
 from django import forms
 from django.contrib.auth import authenticate,login as UserLogin,logout as UserLogout
