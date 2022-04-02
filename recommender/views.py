@@ -1,20 +1,19 @@
+from ast import Import
 from distutils.log import error
 from urllib import response
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from django.http import HttpResponse
 import requests
-# from Recommend_movie import recommend_movie
-
-
-# Create your views here.
 import pandas as pd
 import numpy as np
 from nltk.stem.porter import PorterStemmer
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
-
+# from Recommend_movie import recommend_movie
+from register import views as v
 ps=PorterStemmer()
 
+# Create your views here.
 def stem(text):
     y=[]
     for i in text.split():
@@ -62,8 +61,9 @@ def firstpage(request):
     return v.register(request)
 
 def home(request):
-    return render(request,'Homepage.html')
-
+    if v.isLoggedIn():
+        return render(request,'Homepage.html')
+    return redirect('login')
 
 def output(request):
     movie_name=str(request.POST.get('movie_name'))

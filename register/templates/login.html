@@ -35,8 +35,10 @@
         <form  method="post" action="/login">
             {% csrf_token %}
                 <div class="crispyforms-login">
-                    {% load crispy_forms_tags %}
-                    {{ form|crispy }}
+                    <!-- {% load crispy_forms_tags %}
+                    {{ form|crispy }} -->
+                    <input type="text" name="username" placeholder="Enter username"><br><br>
+                    <input type="password" name="password" placeholder="Enter password"><br><br>
                 </div>
                 <input type="submit" class="submit_btn" value="SIGN IN">
         </form>

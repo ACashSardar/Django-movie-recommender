@@ -26,5 +26,5 @@ urlpatterns = [
     path('',include('recommender.urls')),
     path('register',v.register,name='register'),
     path('login',v.login,name='login'),
-    path('logout',auth_views.LogoutView.as_view(template_name='logout.html'),name='logout'),
+    path('logout',v.logout,name='logout'),
 ]
