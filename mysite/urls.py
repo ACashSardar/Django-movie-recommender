@@ -17,14 +17,10 @@ from tempfile import template
 from unicodedata import name
 from django.contrib import admin
 from django.urls import path,include
-from register import views as v
 from django.contrib.auth import views as auth_views
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('recommender.urls')),
-    path('register',v.register,name='register'),
-    path('login',v.login,name='login'),
-    path('logout',v.logout,name='logout'),
 ]

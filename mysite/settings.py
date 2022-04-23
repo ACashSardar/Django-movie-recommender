@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'recommender',
-    'register',
     'crispy_forms',
 ]
 
@@ -60,7 +59,7 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR,'recommender/templates'),os.path.join(BASE_DIR,'register/templates')],
+        'DIRS': [os.path.join(BASE_DIR,'recommender/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -132,6 +131,3 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Activate Django-herouk
 django_heroku.settings(locals(),logging=False)
-
-CRISPY_TEMPLATE_PACK="bootstrap3"
-LOGIN_REDIRECT_URL='/homepage'

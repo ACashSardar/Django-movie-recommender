@@ -1,6 +1,3 @@
-from ast import Import
-from distutils.log import error
-from urllib import response
 from django.shortcuts import redirect, render
 from django.http import HttpResponse
 import requests
@@ -10,7 +7,7 @@ from nltk.stem.porter import PorterStemmer
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 # from Recommend_movie import recommend_movie
-from register import views as v
+
 ps=PorterStemmer()
 
 # Create your views here.
@@ -18,7 +15,6 @@ def stem(text):
     y=[]
     for i in text.split():
         y.append(ps.stem(i))
-
     return " ".join(y)
     
 new_df=pd.read_csv('./staticfiles/clean_data.csv')
@@ -55,15 +51,9 @@ def recommend_movie(movie_name):
         rec_mov_poster.append(fetch_poster(movies['id'].iloc[i[0]]))
         #print(movies['title'].iloc[i[0]]) #movie names
     return rec_mov_id,rec_mov_name,rec_mov_poster
-    
-def firstpage(request):
-    from register import views as v
-    return v.register(request)
 
 def home(request):
-    if v.LoggedIn:
-        return render(request,'Homepage.html')
-    return redirect('login')
+    return render(request,'Home.html')
 
 def output(request):
     movie_name=str(request.POST.get('movie_name'))
@@ -78,12 +68,11 @@ def output(request):
                 key_list.append(information['results'][0]['key'])
             except:
                 key_list.append('bad request')
-
         My_dict={str(i+1)+". "+name[i]:[poster[i],key_list[i]] for i in range(len(name))}
-        return render(request,'Homepage.html',{'result':My_dict, 'movie_name':movie_name, 'status':True})    
-    
+
+        return render(request,'Home.html',{'result':My_dict, 'movie_name':movie_name, 'status':True,'error':False})    
     except:
-        return render(request,'Warning.html',{'movie_name':movie_name})
+        return render(request,'Home.html',{'status':False,'error':True})
 
 
 if __name__=="__main__":
