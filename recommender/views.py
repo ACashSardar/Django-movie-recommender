@@ -40,7 +40,7 @@ def recommend_movie(movie_name):
     cos_sim=similarity[indx]
     enum_list=list(enumerate(cos_sim))
     score_list=sorted(enum_list,reverse=True,key=lambda x:x[1])
-    score_list=score_list[1:11]
+    score_list=score_list[1:13]
 
     rec_mov_id=[]
     rec_mov_name=[]
